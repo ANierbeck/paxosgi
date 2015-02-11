@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.metlife.gsvp.common</groupId>
+  <artifactId>MetLife-Common</artifactId>
+  <packaging>bundle</packaging>
+  <version>1.0</version>
+  <name>GSvP MetLife-Common</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+    <junit-version>4.4</junit-version>
+    <pax-exam-version>2.5.0</pax-exam-version>
+	<slf4j-version>1.7.10</slf4j-version>
+  </properties>
+  
+  <dependencies>
+    
+	  <dependency>
+        <groupId>org.ops4j.pax.exam</groupId>
+        <artifactId>pax-exam</artifactId>
+        <version>${pax-exam-version}</version>
+      </dependency>
+      
+      <dependency>
+        <groupId>org.ops4j.pax.exam</groupId>
+        <artifactId>pax-exam-container-native</artifactId>
+        <version>${pax-exam-version}</version>
+      </dependency>
+      
+	  <dependency>
+        <groupId>org.ops4j.pax.exam</groupId>
+        <artifactId>pax-exam-junit4</artifactId>
+        <version>${pax-exam-version}</version>
+      </dependency>
+	  <dependency>
+       <groupId>org.ops4j.pax.exam</groupId>
+       <artifactId>pax-exam-link-mvn</artifactId>
+       <version>${pax-exam-version}</version>
+       <scope>test</scope>
+     </dependency>
+	 <dependency>
+       <groupId>org.ops4j.pax.url</groupId>
+       <artifactId>pax-url-aether</artifactId>
+       <version>1.4.0</version>
+       <scope>test</scope>
+     </dependency>
+     <dependency>
+         <groupId>org.apache.felix</groupId>
+         <artifactId>org.apache.felix.scr.annotations</artifactId>
+         <version>1.9.6</version>
+         <scope>provided</scope>
+    </dependency>
+	<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>${slf4j-version}</version>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-simple</artifactId>
+       <version>${slf4j-version}</version>
+       <scope>compile</scope>
+     </dependency>
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20090211</version>
+    <scope>compile</scope>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.felix</groupId>
+	<artifactId>org.apache.felix.framework</artifactId>
+	<version>4.6.0</version>
+</dependency>
+
+  </dependencies>
+  <build>  
+        <plugins>  
+            <!-- maven-bundle-plugin [3] -->  
+            <plugin>  
+                <groupId>org.apache.felix</groupId>  
+                <artifactId>maven-bundle-plugin</artifactId>  
+                <version>2.0.1</version>  
+                <extensions>true</extensions>  
+                <!-- maven-bundle-plugin configuration [4] -->  
+                <configuration>  
+                    <instructions>  
+                        <Export-Package>
+							com.metlife.gs.api, com.metlife.gs.cons
+						</Export-Package>	
+                        <Import-Package>  
+                            org.osgi.framework, org.slf4j, org.json, org.apache.felix.scr.annotations
+                        </Import-Package>  
+                        <Bundle-SymbolicName>  
+                            com.metlife.gs.MetLife-Common  
+                        </Bundle-SymbolicName>  
+                         <Bundle-Classpath>
+						 </Bundle-Classpath>
+						 
+                    </instructions>  
+                </configuration>  
+            </plugin> 
+<plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-scr-plugin</artifactId>
+        <version>1.9.0</version>
+        <executions>
+          <execution>
+            <id>generate-scr-scrdescriptor</id>
+            <goals>
+              <goal>scr</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+            <!-- other plugins ... -->  
+        </plugins>  
+    </build>  
+</project>
