@@ -27,6 +27,7 @@ public class MetLifeCommonTest {
 			//mavenBundle("org.apache.felix", "org.apache.felix.scr.annotations"),
             //bundle("http://www.example.com/repository/foo-1.2.3.jar"),
 			bundle("file:C:\\cygwin64\\home\\phelm\\org.apache.felix.scr.annotations-1.9.10.jar"),
+			bundle("file:C:\\cygwin64\\home\\phelm\\org.apache.felix.scr-1.8.0.jar"),
 			bundle("file:C:\\cygwin64\\home\\phelm\\json-1.5.jar"),
 			bundle("file:C:\\cygwin64\\home\\phelm\\slf4j-api-1.7.10.jar"),
 			bundle("file:C:\\cygwin64\\home\\phelm\\slf4j-simple-1.7.10.jar").noStart(),

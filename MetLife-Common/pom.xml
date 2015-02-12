@@ -52,6 +52,12 @@
          <scope>provided</scope>
     </dependency>
 	<dependency>
+	<groupId>org.apache.felix</groupId>
+	<artifactId>org.apache.felix.scr</artifactId>
+	<version>1.8.0</version>
+</dependency>
+
+	<dependency>
     <groupId>org.slf4j</groupId>
     <artifactId>slf4j-api</artifactId>
     <version>${slf4j-version}</version>
