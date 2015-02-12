@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Service-Component: OSGI-INF/com.metlife.gs.cons.GSConstants.xml,OSGI-I
+ NF/com.metlife.gs.to.BaseTO.xml
+Export-Package: com.metlife.gs.api;uses:="org.json",com.metlife.gs.con
+ s
+Built-By: phelm
+Tool: Bnd-0.0.357
+Bundle-Name: GSvP MetLife-Common
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.7.0_55
+Bundle-Version: 1.0
+Bnd-LastModified: 1423709407474
+Bundle-ManifestVersion: 2
+Import-Package: org.apache.felix.scr.annotations,org.json,org.osgi.fra
+ mework;version="1.8",org.slf4j;version="1.7"
+Bundle-SymbolicName: com.metlife.gs.MetLife-Common
+
