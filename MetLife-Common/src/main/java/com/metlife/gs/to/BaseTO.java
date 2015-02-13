@@ -1,14 +1,16 @@
 package com.metlife.gs.to;
-import org.apache.felix.scr.annotations.*;
 import java.io.Serializable;
 
+import org.apache.felix.scr.annotations.Component;
+import org.apache.felix.scr.annotations.Service;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import com.metlife.gs.api.GSvPMetLifeCommonBaseTOInterface;
 import com.metlife.gs.cons.GSConstants;
-@Component
+@Component(immediate=true)
 @Service(value = com.metlife.gs.api.GSvPMetLifeCommonBaseTOInterface.class)
 /*******************************************************************************
  * iGATE Corporation.
@@ -18,7 +20,6 @@ import com.metlife.gs.cons.GSConstants;
  * -------------------------------------------------------- Created iGate
  * 12/30/2012
  ******************************************************************************/
-
 public class BaseTO implements Serializable, GSvPMetLifeCommonBaseTOInterface {
 
 	/**
