@@ -8,7 +8,6 @@ import org.apache.felix.scr.annotations.*;
  */
 //lets see if this path works!
 @Component
-
 public final class GSConstants  {
 
 	public GSConstants() {
