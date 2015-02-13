@@ -15,35 +15,7 @@
   </properties>
   
   <dependencies>
-    <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam</artifactId>
-        <version>${pax-exam-version}</version>
-      </dependency>
-      
-      <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-container-native</artifactId>
-        <version>${pax-exam-version}</version>
-      </dependency>
-      
-	  <dependency>
-        <groupId>org.ops4j.pax.exam</groupId>
-        <artifactId>pax-exam-junit4</artifactId>
-        <version>${pax-exam-version}</version>
-      </dependency>
-	  <dependency>
-       <groupId>org.ops4j.pax.exam</groupId>
-       <artifactId>pax-exam-link-mvn</artifactId>
-       <version>${pax-exam-version}</version>
-       <scope>test</scope>
-     </dependency>
-	 <dependency>
-       <groupId>org.ops4j.pax.url</groupId>
-       <artifactId>pax-url-aether</artifactId>
-       <version>1.4.0</version>
-       <scope>test</scope>
-     </dependency>
+    
 	  
      <dependency>
          <groupId>org.apache.felix</groupId>
@@ -79,8 +51,10 @@
 <dependency>
 	<groupId>org.apache.felix</groupId>
 	<artifactId>org.apache.felix.framework</artifactId>
-	<version>4.6.0</version>
+	<version>4.0.3</version>
 </dependency>
+
+
 
   </dependencies>
   <build>  
@@ -98,7 +72,7 @@
 							com.metlife.gs.api, com.metlife.gs.cons
 						</Export-Package>	
                         <Import-Package>  
-                            org.osgi.framework, org.slf4j, org.json, org.apache.felix.scr.annotations
+                            org.slf4j, org.json, org.apache.felix.scr.annotations
                         </Import-Package>  
                         <Bundle-SymbolicName>  
                             com.metlife.gs.MetLife-Common  
